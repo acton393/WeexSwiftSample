@@ -1,0 +1,366 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC30C14F1D145C8800267BEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC30C14E1D145C8800267BEF /* AppDelegate.swift */; };
+		DC30C1511D145C8800267BEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC30C1501D145C8800267BEF /* ViewController.swift */; };
+		DC30C1541D145C8800267BEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC30C1521D145C8800267BEF /* Main.storyboard */; };
+		DC30C1561D145C8800267BEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC30C1551D145C8800267BEF /* Assets.xcassets */; };
+		DC30C1591D145C8800267BEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC30C1571D145C8800267BEF /* LaunchScreen.storyboard */; };
+		DC86B1681D145D3E001E3655 /* WeexSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC86B1671D145D3E001E3655 /* WeexSDK.framework */; };
+		DC86B16F1D146117001E3655 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC86B16E1D146117001E3655 /* JavaScriptCore.framework */; };
+		DC86B1721D146157001E3655 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = DC86B1711D146157001E3655 /* SRWebSocket.m */; };
+		DC86B1741D146174001E3655 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DC86B1731D146174001E3655 /* libicucore.tbd */; };
+		DC86B1761D1461FA001E3655 /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = DC86B1751D1461FA001E3655 /* main.js */; };
+		DC86B17A1D14622F001E3655 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC86B1791D14622F001E3655 /* AVFoundation.framework */; };
+		DC86B17C1D14625C001E3655 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC86B17B1D14625C001E3655 /* CoreMedia.framework */; };
+		DC86B17E1D146261001E3655 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC86B17D1D146261001E3655 /* MediaPlayer.framework */; };
+		DC86B17F1D14626C001E3655 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC86B1771D146228001E3655 /* AVKit.framework */; };
+		DC86B1831D14E486001E3655 /* hello.js in Resources */ = {isa = PBXBuildFile; fileRef = DC86B1821D14E486001E3655 /* hello.js */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DC30C14B1D145C8800267BEF /* SwiftWeexSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftWeexSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC30C14E1D145C8800267BEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DC30C1501D145C8800267BEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DC30C1531D145C8800267BEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC30C1551D145C8800267BEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DC30C1581D145C8800267BEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DC30C15A1D145C8800267BEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC86B1671D145D3E001E3655 /* WeexSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WeexSDK.framework; path = lib/WeexSDK.framework; sourceTree = "<group>"; };
+		DC86B16A1D145FF4001E3655 /* SwiftWeexSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftWeexSample-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		DC86B16E1D146117001E3655 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		DC86B1701D146157001E3655 /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
+		DC86B1711D146157001E3655 /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
+		DC86B1731D146174001E3655 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		DC86B1751D1461FA001E3655 /* main.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = main.js; path = lib/WeexSDK.framework/main.js; sourceTree = "<group>"; };
+		DC86B1771D146228001E3655 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		DC86B1791D14622F001E3655 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		DC86B17B1D14625C001E3655 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		DC86B17D1D146261001E3655 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		DC86B1821D14E486001E3655 /* hello.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = hello.js; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC30C1481D145C8800267BEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC86B17F1D14626C001E3655 /* AVKit.framework in Frameworks */,
+				DC86B17E1D146261001E3655 /* MediaPlayer.framework in Frameworks */,
+				DC86B17C1D14625C001E3655 /* CoreMedia.framework in Frameworks */,
+				DC86B17A1D14622F001E3655 /* AVFoundation.framework in Frameworks */,
+				DC86B1741D146174001E3655 /* libicucore.tbd in Frameworks */,
+				DC86B16F1D146117001E3655 /* JavaScriptCore.framework in Frameworks */,
+				DC86B1681D145D3E001E3655 /* WeexSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC30C1421D145C8800267BEF = {
+			isa = PBXGroup;
+			children = (
+				DC30C14D1D145C8800267BEF /* SwiftWeexSample */,
+				DC30C14C1D145C8800267BEF /* Products */,
+				DC86B1691D145D45001E3655 /* framework */,
+			);
+			sourceTree = "<group>";
+		};
+		DC30C14C1D145C8800267BEF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC30C14B1D145C8800267BEF /* SwiftWeexSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC30C14D1D145C8800267BEF /* SwiftWeexSample */ = {
+			isa = PBXGroup;
+			children = (
+				DC86B1701D146157001E3655 /* SRWebSocket.h */,
+				DC86B1711D146157001E3655 /* SRWebSocket.m */,
+				DC30C14E1D145C8800267BEF /* AppDelegate.swift */,
+				DC30C1501D145C8800267BEF /* ViewController.swift */,
+				DC30C1521D145C8800267BEF /* Main.storyboard */,
+				DC86B16A1D145FF4001E3655 /* SwiftWeexSample-Bridging-Header.h */,
+				DC30C1551D145C8800267BEF /* Assets.xcassets */,
+				DC30C1571D145C8800267BEF /* LaunchScreen.storyboard */,
+				DC30C15A1D145C8800267BEF /* Info.plist */,
+			);
+			path = SwiftWeexSample;
+			sourceTree = "<group>";
+		};
+		DC86B1691D145D45001E3655 /* framework */ = {
+			isa = PBXGroup;
+			children = (
+				DC86B1821D14E486001E3655 /* hello.js */,
+				DC86B17D1D146261001E3655 /* MediaPlayer.framework */,
+				DC86B17B1D14625C001E3655 /* CoreMedia.framework */,
+				DC86B1791D14622F001E3655 /* AVFoundation.framework */,
+				DC86B1771D146228001E3655 /* AVKit.framework */,
+				DC86B1751D1461FA001E3655 /* main.js */,
+				DC86B1731D146174001E3655 /* libicucore.tbd */,
+				DC86B16E1D146117001E3655 /* JavaScriptCore.framework */,
+				DC86B1671D145D3E001E3655 /* WeexSDK.framework */,
+			);
+			name = framework;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC30C14A1D145C8800267BEF /* SwiftWeexSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC30C15D1D145C8800267BEF /* Build configuration list for PBXNativeTarget "SwiftWeexSample" */;
+			buildPhases = (
+				DC30C1471D145C8800267BEF /* Sources */,
+				DC30C1481D145C8800267BEF /* Frameworks */,
+				DC30C1491D145C8800267BEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftWeexSample;
+			productName = SwiftWeexSample;
+			productReference = DC30C14B1D145C8800267BEF /* SwiftWeexSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC30C1431D145C8800267BEF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = com.taobao.weex;
+				TargetAttributes = {
+					DC30C14A1D145C8800267BEF = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = E9NTP5L2G2;
+					};
+				};
+			};
+			buildConfigurationList = DC30C1461D145C8800267BEF /* Build configuration list for PBXProject "SwiftWeexSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC30C1421D145C8800267BEF;
+			productRefGroup = DC30C14C1D145C8800267BEF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC30C14A1D145C8800267BEF /* SwiftWeexSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC30C1491D145C8800267BEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC86B1761D1461FA001E3655 /* main.js in Resources */,
+				DC86B1831D14E486001E3655 /* hello.js in Resources */,
+				DC30C1591D145C8800267BEF /* LaunchScreen.storyboard in Resources */,
+				DC30C1561D145C8800267BEF /* Assets.xcassets in Resources */,
+				DC30C1541D145C8800267BEF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC30C1471D145C8800267BEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC86B1721D146157001E3655 /* SRWebSocket.m in Sources */,
+				DC30C1511D145C8800267BEF /* ViewController.swift in Sources */,
+				DC30C14F1D145C8800267BEF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DC30C1521D145C8800267BEF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC30C1531D145C8800267BEF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DC30C1571D145C8800267BEF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC30C1581D145C8800267BEF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC30C15B1D145C8800267BEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftWeexSample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DC30C15C1D145C8800267BEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftWeexSample-Bridging-Header.h";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC30C15E1D145C8800267BEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib",
+				);
+				INFOPLIST_FILE = SwiftWeexSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.taobao.weex.SwiftWeexSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftWeexSample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DC30C15F1D145C8800267BEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib",
+				);
+				INFOPLIST_FILE = SwiftWeexSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.taobao.weex.SwiftWeexSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftWeexSample-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC30C1461D145C8800267BEF /* Build configuration list for PBXProject "SwiftWeexSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC30C15B1D145C8800267BEF /* Debug */,
+				DC30C15C1D145C8800267BEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC30C15D1D145C8800267BEF /* Build configuration list for PBXNativeTarget "SwiftWeexSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC30C15E1D145C8800267BEF /* Debug */,
+				DC30C15F1D145C8800267BEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DC30C1431D145C8800267BEF /* Project object */;
+}
