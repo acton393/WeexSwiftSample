@@ -31,6 +31,10 @@
   
 - Build this project or use the xcode default hot key `⌘ + b`
 
+- Finally you can find `Products` directory in `weex/ios/sdk`, `WeexSDK.framework` was here
+
+  ![img](http://img4.tbcdn.cn/L1/461/1/52594fea03ee1154845d0f897558b81b4b5bef2e)
+
 ### <p name="compile">You can build your own Weex SDK after modifying</p]>
 
 
