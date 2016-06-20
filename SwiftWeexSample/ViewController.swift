@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func finalize() {
+    deinit {
         instance.destroyInstance()
     }
     
@@ -32,28 +32,26 @@ class ViewController: UIViewController {
         instance.viewController = self
         let width = self.view.frame.size.width
         instance.frame = CGRectMake(self.view.frame.size.width-width, 0, width, weexHeight)
-        var test:NSString = "s"
         instance.onCreate = {
             (view:UIView!)-> Void in
             self.weexView.removeFromSuperview()
             self.weexView = view;
             self.view.addSubview(self.weexView)
             UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, self.weexView)
-            test = "1"
-            NSLog("%@", test)
         }
         instance.onFailed = {
             (error:NSError!)-> Void in
-            NSLog("faild at error: %@", error)
+            
+            print("faild at error: %@", error)
         }
         
         instance.renderFinish = {
             (view:UIView!)-> Void in
-            NSLog("render finish")
+            print("render finish")
         }
         instance.updateFinish = {
             (view:UIView!)-> Void in
-            NSLog("update finish")
+            print("update finish")
         }
         let url = String.init(format: "file://%@/hello.js", NSBundle.mainBundle().bundlePath)
         instance.renderWithURL(NSURL.init(string: url), options: NSDictionary.init(object: url, forKey:"bundleUrl") as [NSObject : AnyObject], data: nil)

@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         WXAppConfiguration.setAppVersion("1.0.0")
         
         //设置Log输出等级：调试环境默认为Debug，正式发布会自动关闭。
-        WXLog.setLogLevel(WXLogLevel.Verbose)
+        WXLog.setLogLevel(WXLogLevel.Debug)
         
         //初始化SDK环境
         WXSDKEngine.initSDKEnviroment()
