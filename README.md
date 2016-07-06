@@ -8,6 +8,7 @@
 
 #### You must replace file in WeexSwiftSample/lib/WeexSDK.framework and then WeexSwiftSample project can run correctly
 
+
 ### How to  get WeexSDK.framework
 
 - Download [Weex](http://gw.alicdn.com/bao/uploaded/LB14u_rKpXXXXaUXXXXXXXXXXXX.zip?spm=a219a.7629140.0.0.Y28vYL&file=LB14u_rKpXXXXaUXXXXXXXXXXXX.zip) SDK  or <a href="#compile">compile</a> from Weex source [here](https://github.com/alibaba/weex)
@@ -35,7 +36,12 @@
 
   ![img](http://img4.tbcdn.cn/L1/461/1/52594fea03ee1154845d0f897558b81b4b5bef2e)
 
-### <p name="compile">You can build your own Weex SDK after modifying</p]>
+### <p name="compile">You can build your own Weex SDK after modifying</p>
+
+#### important
+add `-ObJc` to your project settings,just like this
+
+![img](http://img3.tbcdn.cn/L1/461/1/430ae522f5031ff728c95efea49219a11e6852b3)
 
 
 - reference	 
