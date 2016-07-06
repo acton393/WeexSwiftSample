@@ -39,7 +39,7 @@
 ### <p name="compile">You can build your own Weex SDK after modifying</p>
 
 #### important
-add `-ObJc` to your project settings,just like this
+add `-ObjC` to your project settings,just like this
 
 ![img](http://img3.tbcdn.cn/L1/461/1/430ae522f5031ff728c95efea49219a11e6852b3)
 
