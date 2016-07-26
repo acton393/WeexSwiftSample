@@ -1,5 +1,3 @@
-## WeexSwiftSample
-
 #[Weex](https://github.com/alibaba/weex)
 
 
@@ -8,12 +6,10 @@
 
 #### You must replace file in WeexSwiftSample/lib/WeexSDK.framework and then WeexSwiftSample project can run correctly
 
-
 ### How to  get WeexSDK.framework
 
-- Download [Weex](http://gw.alicdn.com/bao/uploaded/LB14u_rKpXXXXaUXXXXXXXXXXXX.zip?spm=a219a.7629140.0.0.Y28vYL&file=LB14u_rKpXXXXaUXXXXXXXXXXXX.zip) SDK  or <a href="#compile">compile</a> from Weex source [here](https://github.com/alibaba/weex)
- 
-### How to compile Weex SDK from Source
+recommend you to <a href="#compile">compile</a> from Weex source [here](https://github.com/alibaba/weex),so that you can get the new feature, and can build your own Weex SDK after modifying
+
 - clone [Weex](https://github.com/alibaba/weex) project  
   you can use SSH
   
@@ -36,8 +32,16 @@
 
   ![img](http://img4.tbcdn.cn/L1/461/1/52594fea03ee1154845d0f897558b81b4b5bef2e)
 
-### <p name="compile">You can build your own Weex SDK after modifying</p>
+### Integrate to your Swift project
 
+- Import the framework you get above and import system framework
+  ![img](http://img1.tbcdn.cn/L1/461/1/ce309c54c7b3dd3607d7a3d07c44bfd0e0e10f86) 
+- Add `SocketRocket`：copy [here](https://github.com/alibaba/weex/tree/dev/ios/sdk/WeexSDK/dependency) `SRWebSocket.h/m` to your own Project  （if cocoaPods is used in your project，add `pod 'SocketRocket'` to Podfie ）
+- Add `main.js`(which is in the `WeexSDK.framework`) to your main bundle
+  ![img](http://img1.tbcdn.cn/L1/461/1/bb3998595bafe9c9336411160c0b6bd3eeb843ef)
+- Import `WeexSDK` module
+  ![img](http://img1.tbcdn.cn/L1/461/1/34fb8a10c2995a50c8f3f4cda0d4310b79131b0c)
+  
 #### important
 add `-ObjC` to your project settings,just like this
 

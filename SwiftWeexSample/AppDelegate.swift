@@ -16,15 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        //业务配置，非必需
+        //for your business, not necessary
         WXAppConfiguration.setAppGroup("SwiftWeexSample")
         WXAppConfiguration.setAppName("WeexDemo")
         WXAppConfiguration.setAppVersion("1.0.0")
         
-        //设置Log输出等级：调试环境默认为Debug，正式发布会自动关闭。
         WXLog.setLogLevel(WXLogLevel.All)
         
-        //初始化SDK环境
+        //init WeexSDK
         WXSDKEngine.initSDKEnviroment()
         return true
     }
