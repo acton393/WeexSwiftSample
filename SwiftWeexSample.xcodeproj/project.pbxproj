@@ -33,7 +33,6 @@
 		DC30C1581D145C8800267BEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC30C15A1D145C8800267BEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC86B1671D145D3E001E3655 /* WeexSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WeexSDK.framework; path = lib/WeexSDK.framework; sourceTree = "<group>"; };
-		DC86B16A1D145FF4001E3655 /* SwiftWeexSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftWeexSample-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		DC86B16E1D146117001E3655 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		DC86B1701D146157001E3655 /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
 		DC86B1711D146157001E3655 /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
@@ -89,7 +88,6 @@
 				DC30C14E1D145C8800267BEF /* AppDelegate.swift */,
 				DC30C1501D145C8800267BEF /* ViewController.swift */,
 				DC30C1521D145C8800267BEF /* Main.storyboard */,
-				DC86B16A1D145FF4001E3655 /* SwiftWeexSample-Bridging-Header.h */,
 				DC30C1551D145C8800267BEF /* Assets.xcassets */,
 				DC30C1571D145C8800267BEF /* LaunchScreen.storyboard */,
 				DC30C15A1D145C8800267BEF /* Info.plist */,
@@ -316,7 +314,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.taobao.weex.SwiftWeexSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SwiftWeexSample-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 2.3;
 			};
@@ -337,7 +335,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.taobao.weex.SwiftWeexSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SwiftWeexSample-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 2.3;
 			};
 			name = Release;

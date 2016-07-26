@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WeexSDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

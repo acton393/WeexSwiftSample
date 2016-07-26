@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WeexSDK
 
 class ViewController: UIViewController {
     var instance:WXSDKInstance?;
@@ -62,8 +63,8 @@ class ViewController: UIViewController {
             (view:UIView!)-> Void in
             print("update finish")
         }
-        let url = String.init("http://doc.jiuma.me/template.js")
-//        let url = String.init(format: "file://%@/hello.js", NSBundle.mainBundle().bundlePath)
+        
+        let url = String.init(format: "file://%@/hello.js", NSBundle.mainBundle().bundlePath)
         instance!.renderWithURL(NSURL.init(string: url), options: NSDictionary.init(object: url, forKey:"bundleUrl") as [NSObject : AnyObject], data: nil)
     }
 
