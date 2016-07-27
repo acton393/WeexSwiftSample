@@ -1,7 +1,7 @@
 #[Weex](https://github.com/alibaba/weex)
 
 
-##[WeexOCSample](http://gw.alicdn.com/bao/uploaded/LB1yfvtKpXXXXXbXXXXXXXXXXXX.zip?spm=a219a.7629140.0.0.AymsNe&file=LB1yfvtKpXXXXXbXXXXXXXXXXXX.zip)
+##[WeexOCSample](https://github.com/acton393/WeexOCExample)
 
 
 #### You must replace file in WeexSwiftSample/lib/WeexSDK.framework and then WeexSwiftSample project can run correctly
