@@ -13,11 +13,18 @@ class ViewController: UIViewController {
     var instance:WXSDKInstance?;
     var weexView = UIView()
     var weexHeight:CGFloat?;
+    var top:CGFloat?;
+    var url:NSURL?;
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.render()
-        // Do any additional setup after loading the view, typically from a nib.
+        if !self.navigationController!.navigationBar.hidden {
+            top = CGRectGetMaxY(self.navigationController!.navigationBar.frame);
+        } else {
+            top = CGRectGetMaxY(UIApplication.sharedApplication().statusBarFrame)
+        }
+        weexHeight = self.view.frame.size.height - top!;
+        render()
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,9 +45,8 @@ class ViewController: UIViewController {
         instance = WXSDKInstance();
         instance!.viewController = self
         let width = self.view.frame.size.width
-        weexHeight = self.view.frame.height - 64;
         
-        instance!.frame = CGRectMake(self.view.frame.size.width-width, 0, width, weexHeight!)
+        instance!.frame = CGRectMake(self.view.frame.size.width-width, top!, width, weexHeight!)
         weak var weakSelf:ViewController? = self
         instance!.onCreate = {
             (view:UIView!)-> Void in
@@ -64,8 +70,7 @@ class ViewController: UIViewController {
             print("update finish")
         }
         
-        let url = String.init(format: "file://%@/hello.js", NSBundle.mainBundle().bundlePath)
-        instance!.renderWithURL(NSURL.init(string: url), options: NSDictionary.init(object: url, forKey:"bundleUrl") as [NSObject : AnyObject], data: nil)
+        instance!.renderWithURL(url, options: ["bundleUrl":String.init(format: "file://%@/bundlejs/", NSBundle.mainBundle().bundlePath)], data: nil)
     }
 
 

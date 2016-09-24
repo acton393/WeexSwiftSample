@@ -18,13 +18,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         //for your business, not necessary
         WXAppConfiguration.setAppGroup("SwiftWeexSample")
-        WXAppConfiguration.setAppName("WeexDemo")
+        WXAppConfiguration.setAppName("SwiftWeexSample")
         WXAppConfiguration.setAppVersion("1.0.0")
         
         WXLog.setLogLevel(WXLogLevel.All)
         
+        // register event module
+        WXSDKEngine.registerModule("event", withClass: NSClassFromString("WXEventModule"))
+        
+        // register handler
+        WXSDKEngine.registerHandler(WXImgLoaderDefaultImpl(), withProtocol:NSProtocolFromString("WXImgLoaderProtocol"))
+        
         //init WeexSDK
         WXSDKEngine.initSDKEnviroment()
+        
+        let viewController:ViewController = ViewController()
+        viewController.url = NSURL.init(string: String.init(format: "file://%@/bundlejs/index.js", NSBundle.mainBundle().bundlePath))
+        window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
+        window?.backgroundColor = UIColor.whiteColor()
+        window?.rootViewController = UINavigationController.init(rootViewController: viewController)
         return true
     }
 
