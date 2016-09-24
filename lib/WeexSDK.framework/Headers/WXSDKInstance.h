@@ -52,6 +52,7 @@ typedef NS_ENUM(NSInteger, WXState) {//state.code
     WeexInstanceForeground,
     WeexInstanceBackground,
     WeexInstanceMemoryWarning,
+    WeexInstanceBindChanged,
     WeexInstanceDestroy
 };
 
@@ -200,5 +201,7 @@ typedef NS_ENUM(NSInteger, WXErrorCode) {//error.code
 - (void)finishPerformance DEPRECATED_MSG_ATTRIBUTE();
 
 - (void)reloadData:(id)data  DEPRECATED_MSG_ATTRIBUTE("Use refreshInstance: method instead.");
+
+- (void)creatFinish;
 
 @end
