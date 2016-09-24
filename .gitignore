@@ -6,6 +6,8 @@
 build/
 DerivedData/
 
+lib/WeexSDK.framework/WeexSDK
+
 ## Various settings
 *.pbxuser
 !default.pbxuser
