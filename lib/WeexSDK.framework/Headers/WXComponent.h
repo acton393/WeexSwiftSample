@@ -6,6 +6,7 @@
  * For the full copyright and license information,please view the LICENSE file in the root directory of this source tree.
  */
 
+#import <Foundation/Foundation.h>
 #import "WXLayoutDefine.h"
 
 @class WXSDKInstance;
@@ -94,12 +95,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property(nonatomic, assign) BOOL isViewFrameSyncWithCalculated;
 
-/**
- * @abstract Return the calculated absolute position.
- *
- * @warning Subclasses must not override this.
- */
-@property(nonatomic, assign) CGPoint absolutePosition;
+///**
+// * @abstract Return the calculated absolute position.
+// *
+// * @warning Subclasses must not override this.
+// */
+//@property(nonatomic, assign) CGPoint absolutePosition;
 
 /**
  * @abstract Return the css node used to layout.
