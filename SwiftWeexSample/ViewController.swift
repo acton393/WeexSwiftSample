@@ -18,12 +18,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if !self.navigationController!.navigationBar.hidden {
-            top = CGRectGetMaxY(self.navigationController!.navigationBar.frame);
-        } else {
-            top = CGRectGetMaxY(UIApplication.sharedApplication().statusBarFrame)
-        }
-        weexHeight = self.view.frame.size.height - top!;
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
         render()
     }
 
@@ -46,7 +41,7 @@ class ViewController: UIViewController {
         instance!.viewController = self
         let width = self.view.frame.size.width
         
-        instance!.frame = CGRectMake(self.view.frame.size.width-width, top!, width, weexHeight!)
+        instance!.frame = CGRectMake(0, 0, width, self.view.frame.size.height)
         weak var weakSelf:ViewController? = self
         instance!.onCreate = {
             (view:UIView!)-> Void in
