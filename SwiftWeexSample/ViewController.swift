@@ -9,7 +9,7 @@
 import UIKit
 import WeexSDK
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UIGestureRecognizerDelegate {
     var instance:WXSDKInstance?;
     var weexView = UIView()
     var weexHeight:CGFloat?;
@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self;
         render()
     }
 
