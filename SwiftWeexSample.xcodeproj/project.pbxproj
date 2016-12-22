@@ -16,6 +16,7 @@
 		DC30C1541D145C8800267BEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC30C1521D145C8800267BEF /* Main.storyboard */; };
 		DC30C1561D145C8800267BEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC30C1551D145C8800267BEF /* Assets.xcassets */; };
 		DC30C1591D145C8800267BEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC30C1571D145C8800267BEF /* LaunchScreen.storyboard */; };
+		DC7A15C91E0BC827001BDAA4 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7A15C81E0BC827001BDAA4 /* libstdc++.6.0.9.tbd */; };
 		DC86B16F1D146117001E3655 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC86B16E1D146117001E3655 /* JavaScriptCore.framework */; };
 		DC86B1741D146174001E3655 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DC86B1731D146174001E3655 /* libicucore.tbd */; };
 		DC86B1761D1461FA001E3655 /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = DC86B1751D1461FA001E3655 /* main.js */; };
@@ -77,6 +78,7 @@
 		DC30C1551D145C8800267BEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC30C1581D145C8800267BEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC30C15A1D145C8800267BEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC7A15C81E0BC827001BDAA4 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		DC86B1671D145D3E001E3655 /* WeexSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WeexSDK.framework; path = lib/WeexSDK.framework; sourceTree = "<group>"; };
 		DC86B16E1D146117001E3655 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		DC86B1731D146174001E3655 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
@@ -127,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC7A15C91E0BC827001BDAA4 /* libstdc++.6.0.9.tbd in Frameworks */,
 				DCEC6C6C1D96767C00C7FA7F /* WeexSDK.framework in Frameworks */,
 				DC9867421D825E5F000AF388 /* GLKit.framework in Frameworks */,
 				DC86B17F1D14626C001E3655 /* AVKit.framework in Frameworks */,
@@ -190,6 +193,7 @@
 		DC86B1691D145D45001E3655 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC7A15C81E0BC827001BDAA4 /* libstdc++.6.0.9.tbd */,
 				DC9867411D825E5E000AF388 /* GLKit.framework */,
 				DC86B17D1D146261001E3655 /* MediaPlayer.framework */,
 				DC86B17B1D14625C001E3655 /* CoreMedia.framework */,
@@ -496,6 +500,7 @@
 					"$(PROJECT_DIR)/lib",
 				);
 				INFOPLIST_FILE = SwiftWeexSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.taobao.weex.SwiftWeexSample;
@@ -517,6 +522,7 @@
 					"$(PROJECT_DIR)/lib",
 				);
 				INFOPLIST_FILE = SwiftWeexSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.taobao.weex.SwiftWeexSample;
