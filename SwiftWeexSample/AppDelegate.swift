@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         WXSDKEngine.registerModule("event", withClass: NSClassFromString("WXEventModule"))
         
         // register handler
-        WXSDKEngine.registerHandler(WXImgLoaderDefaultImpl(), withProtocol:NSProtocolFromString("WXImgLoaderProtocol"))
+        WXSDKEngine.registerHandler(WXImageLoaderDefaultImplement(), withProtocol:NSProtocolFromString("WXImgLoaderProtocol"))
         
         //init WeexSDK
         WXSDKEngine.initSDKEnviroment()

@@ -7,4 +7,6 @@
 //
 
 #import "WXEventModule.h"
-#import "WXImgLoaderDefaultImpl.h"
+//#import "WXImgLoaderDefaultImpl.h"
+
+#import "SDWebImageManager.h"
