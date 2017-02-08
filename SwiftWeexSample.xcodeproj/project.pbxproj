@@ -17,6 +17,7 @@
 		DC30C1561D145C8800267BEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC30C1551D145C8800267BEF /* Assets.xcassets */; };
 		DC30C1591D145C8800267BEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC30C1571D145C8800267BEF /* LaunchScreen.storyboard */; };
 		DC59CAFF1E4B3F44004E3963 /* WXImageLoaderDefaultImplement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC59CAFE1E4B3F44004E3963 /* WXImageLoaderDefaultImplement.swift */; };
+		DC59CB011E4B4642004E3963 /* WXMapComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC59CB001E4B4642004E3963 /* WXMapComponent.swift */; };
 		DCEC6C6B1D96761800C7FA7F /* bundlejs in Resources */ = {isa = PBXBuildFile; fileRef = DCEC6C6A1D96761800C7FA7F /* bundlejs */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		DC30C1581D145C8800267BEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC30C15A1D145C8800267BEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC59CAFE1E4B3F44004E3963 /* WXImageLoaderDefaultImplement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WXImageLoaderDefaultImplement.swift; path = extend/WXImageLoaderDefaultImplement.swift; sourceTree = "<group>"; };
+		DC59CB001E4B4642004E3963 /* WXMapComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WXMapComponent.swift; path = extend/WXMapComponent.swift; sourceTree = "<group>"; };
 		DC7A15C81E0BC827001BDAA4 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		DC86B1671D145D3E001E3655 /* WeexSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WeexSDK.framework; path = lib/WeexSDK.framework; sourceTree = "<group>"; };
 		DC86B16E1D146117001E3655 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -81,6 +83,7 @@
 				DC2220CB1D9680C3006BFECC /* WXEventModule.swift */,
 				DC2220C41D968018006BFECC /* WXEventModule.m */,
 				DC2220C51D968018006BFECC /* WXEventModule.h */,
+				DC59CB001E4B4642004E3963 /* WXMapComponent.swift */,
 			);
 			name = extend;
 			sourceTree = "<group>";
@@ -167,13 +170,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = com.taobao.weex;
 				TargetAttributes = {
 					DC30C14A1D145C8800267BEF = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = E9NTP5L2G2;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -266,6 +269,7 @@
 				DC2220CC1D9680C3006BFECC /* WXEventModule.swift in Sources */,
 				DC2220D31D968AFC006BFECC /* WXImgLoaderDefaultImpl.m in Sources */,
 				DC30C1511D145C8800267BEF /* ViewController.swift in Sources */,
+				DC59CB011E4B4642004E3963 /* WXMapComponent.swift in Sources */,
 				DC30C14F1D145C8800267BEF /* AppDelegate.swift in Sources */,
 				DC59CAFF1E4B3F44004E3963 /* WXImageLoaderDefaultImplement.swift in Sources */,
 			);
@@ -307,8 +311,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -353,8 +359,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -374,6 +382,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftWeexSample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -385,10 +394,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/lib",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SwiftWeexSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -397,7 +403,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_DIR}/SwiftWeexSample/SwiftWeexSample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -408,10 +414,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/lib",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SwiftWeexSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -419,7 +422,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.taobao.weex.SwiftWeexSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_DIR}/SwiftWeexSample/SwiftWeexSample-Bridging-Header.h";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

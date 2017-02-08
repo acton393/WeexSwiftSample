@@ -9,16 +9,16 @@
 import Foundation
 
 public extension WXEventModule {
-    public func openURL(url:String) {
+    public func openURL(_ url:String) {
         var newUrl:String = url;
         if url.hasPrefix("//") {
             newUrl = String.init(format: "http://%@", url);
         }else if !url.hasPrefix("http") {
             //relative path
-            newUrl = (NSURL.init(string: url, relativeToURL: weexInstance.scriptURL)!.absoluteString)!
+            newUrl = (URL.init(string: url, relativeTo: weexInstance.scriptURL)!.absoluteString)
         }
         let controller:ViewController = ViewController()
-        controller.url = NSURL.init(string: newUrl)
+        controller.url = URL.init(string: newUrl)
         weexInstance.viewController.navigationController?.pushViewController(controller, animated:true)
     }
 }

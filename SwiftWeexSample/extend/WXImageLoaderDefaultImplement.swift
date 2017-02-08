@@ -12,7 +12,10 @@ import Swift
 import SDWebImage
 
 class WXImageLoaderDefaultImplement:NSObject, WXImgLoaderProtocol {
-    public func downloadImageWithURL(url: String!, imageFrame: CGRect, userInfo options: [NSObject : AnyObject]!, completed completedBlock: ((UIImage!, NSError!, Bool) -> Void)!) -> WXImageOperationProtocol! {
+    
+   
+    func downloadImage(withURL url: String!, imageFrame: CGRect, userInfo options: [AnyHashable : Any]! = [:], completed completedBlock: ((UIImage?, Error?, Bool) -> Void)!) -> WXImageOperationProtocol! {
+        
         var temp:String
         if (url.hasPrefix("//")) {
             temp = "http:" + url;
@@ -20,12 +23,13 @@ class WXImageLoaderDefaultImplement:NSObject, WXImgLoaderProtocol {
             temp = url;
         }
         
-        let operation  = SDWebImageManager.sharedManager().downloadImageWithURL(NSURL.init(string: temp), options: SDWebImageOptions.RetryFailed, progress: { (receivedSize:Int, expectedSize:Int) in
-        }) { (image: UIImage?, error:NSError?, cacheType:SDImageCacheType, finished:Bool, imageURL:NSURL!) in
-                if (completedBlock != nil) {
-                    completedBlock(image, error, finished)
-                }
-        };
+        let operation = SDWebImageManager.shared().downloadImage(with: URL.init(string: temp), options: SDWebImageOptions.retryFailed, progress: { (receivedSize:Int, expectedSize:Int) in
+            
+        }) { (image:UIImage?, error:Error?, cacheType:SDImageCacheType, finished:Bool, imageURL:URL?) in
+            if (completedBlock != nil) {
+                completedBlock(image, error, finished)
+            }
+        }
         
         return operation as? WXImageOperationProtocol
     }

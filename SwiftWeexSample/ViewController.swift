@@ -14,7 +14,7 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
     var weexView = UIView()
     var weexHeight:CGFloat?;
     var top:CGFloat?;
-    var url:NSURL?;
+    var url:URL?;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,43 +30,46 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
     
     deinit {
         if instance != nil {
-            instance!.destroyInstance()
+            instance!.destroy()
         }
     }
     
     func render(){
         if instance != nil {
-            instance!.destroyInstance()
+            instance!.destroy()
         }
         instance = WXSDKInstance();
         instance!.viewController = self
         let width = self.view.frame.size.width
         
-        instance!.frame = CGRectMake(0, 0, width, self.view.frame.size.height)
+        instance!.frame = CGRect(x: 0, y: 0, width: width, height: self.view.frame.size.height)
         weak var weakSelf:ViewController? = self
-        instance!.onCreate = {
-            (view:UIView!)-> Void in
+        
+//        instance?.onCreate
+        instance?.onCreate = {
+            (view:UIView?)-> Void in
             weakSelf!.weexView.removeFromSuperview()
-            weakSelf!.weexView = view;
+            weakSelf!.weexView = view!;
             weakSelf!.view.addSubview(self.weexView)
             UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, weakSelf!.weexView)
         }
-        instance!.onFailed = {
-            (error:NSError!)-> Void in
+        
+        instance?.onFailed = {
+            (error:Error?)-> Void in
             
-            print("faild at error: %@", error)
+            print("faild at error: %@", error!)
         }
         
-        instance!.renderFinish = {
-            (view:UIView!)-> Void in
+        instance?.renderFinish = {
+            (view:UIView?)-> Void in
             print("render finish")
         }
-        instance!.updateFinish = {
-            (view:UIView!)-> Void in
+        instance?.updateFinish = {
+            (view:UIView?)-> Void in
             print("update finish")
         }
         
-        instance!.renderWithURL(url, options: ["bundleUrl":String.init(format: "file://%@/bundlejs/", NSBundle.mainBundle().bundlePath)], data: nil)
+        instance!.render(with: url, options: ["bundleUrl":String.init(format: "file://%@/bundlejs/", Bundle.main.bundlePath)], data: nil)
     }
 
 
