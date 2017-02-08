@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D6C4751AA4CD68B276D0A36A /* libPods-SwiftWeexSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 34ECDB3E58739F21260ACC75 /* libPods-SwiftWeexSample.a */; };
+		721868E11F79B54A520A0FFE /* Pods_SwiftWeexSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6705EEB222486ACEBE4FD5 /* Pods_SwiftWeexSample.framework */; };
 		DC2220C61D968018006BFECC /* WXEventModule.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2220C41D968018006BFECC /* WXEventModule.m */; };
 		DC2220CC1D9680C3006BFECC /* WXEventModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2220CB1D9680C3006BFECC /* WXEventModule.swift */; };
 		DC2220D31D968AFC006BFECC /* WXImgLoaderDefaultImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2220D21D968AFC006BFECC /* WXImgLoaderDefaultImpl.m */; };
@@ -16,14 +16,14 @@
 		DC30C1541D145C8800267BEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC30C1521D145C8800267BEF /* Main.storyboard */; };
 		DC30C1561D145C8800267BEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC30C1551D145C8800267BEF /* Assets.xcassets */; };
 		DC30C1591D145C8800267BEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC30C1571D145C8800267BEF /* LaunchScreen.storyboard */; };
-		DCE81ED61E2FD24400FA5B61 /* WXImageLoaderDefaultImplement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE81ED51E2FD24400FA5B61 /* WXImageLoaderDefaultImplement.swift */; };
+		DC59CAFF1E4B3F44004E3963 /* WXImageLoaderDefaultImplement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC59CAFE1E4B3F44004E3963 /* WXImageLoaderDefaultImplement.swift */; };
 		DCEC6C6B1D96761800C7FA7F /* bundlejs in Resources */ = {isa = PBXBuildFile; fileRef = DCEC6C6A1D96761800C7FA7F /* bundlejs */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		34ECDB3E58739F21260ACC75 /* libPods-SwiftWeexSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SwiftWeexSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D010E1603E5FF8168CAE50D /* Pods-SwiftWeexSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftWeexSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftWeexSample/Pods-SwiftWeexSample.debug.xcconfig"; sourceTree = "<group>"; };
 		68195F33A72AD74FFAB17EB6 /* Pods-SwiftWeexSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftWeexSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftWeexSample/Pods-SwiftWeexSample.release.xcconfig"; sourceTree = "<group>"; };
+		CB6705EEB222486ACEBE4FD5 /* Pods_SwiftWeexSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftWeexSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC2220C41D968018006BFECC /* WXEventModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WXEventModule.m; path = extend/WXEventModule.m; sourceTree = "<group>"; };
 		DC2220C51D968018006BFECC /* WXEventModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXEventModule.h; path = extend/WXEventModule.h; sourceTree = "<group>"; };
 		DC2220C71D968065006BFECC /* SwiftWeexSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftWeexSample-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -37,6 +37,7 @@
 		DC30C1551D145C8800267BEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC30C1581D145C8800267BEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC30C15A1D145C8800267BEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC59CAFE1E4B3F44004E3963 /* WXImageLoaderDefaultImplement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WXImageLoaderDefaultImplement.swift; path = extend/WXImageLoaderDefaultImplement.swift; sourceTree = "<group>"; };
 		DC7A15C81E0BC827001BDAA4 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		DC86B1671D145D3E001E3655 /* WeexSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WeexSDK.framework; path = lib/WeexSDK.framework; sourceTree = "<group>"; };
 		DC86B16E1D146117001E3655 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -47,7 +48,6 @@
 		DC86B17B1D14625C001E3655 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		DC86B17D1D146261001E3655 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		DC9867411D825E5E000AF388 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
-		DCE81ED51E2FD24400FA5B61 /* WXImageLoaderDefaultImplement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WXImageLoaderDefaultImplement.swift; sourceTree = "<group>"; };
 		DCEC6C6A1D96761800C7FA7F /* bundlejs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bundlejs; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6C4751AA4CD68B276D0A36A /* libPods-SwiftWeexSample.a in Frameworks */,
+				721868E11F79B54A520A0FFE /* Pods_SwiftWeexSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,9 +75,9 @@
 		DC2220BB1D967F30006BFECC /* extend */ = {
 			isa = PBXGroup;
 			children = (
+				DC59CAFE1E4B3F44004E3963 /* WXImageLoaderDefaultImplement.swift */,
 				DC2220D11D968AFC006BFECC /* WXImgLoaderDefaultImpl.h */,
 				DC2220D21D968AFC006BFECC /* WXImgLoaderDefaultImpl.m */,
-				DCE81ED51E2FD24400FA5B61 /* WXImageLoaderDefaultImplement.swift */,
 				DC2220CB1D9680C3006BFECC /* WXEventModule.swift */,
 				DC2220C41D968018006BFECC /* WXEventModule.m */,
 				DC2220C51D968018006BFECC /* WXEventModule.h */,
@@ -132,7 +132,7 @@
 				DC86B1731D146174001E3655 /* libicucore.tbd */,
 				DC86B16E1D146117001E3655 /* JavaScriptCore.framework */,
 				DC86B1671D145D3E001E3655 /* WeexSDK.framework */,
-				34ECDB3E58739F21260ACC75 /* libPods-SwiftWeexSample.a */,
+				CB6705EEB222486ACEBE4FD5 /* Pods_SwiftWeexSample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -267,7 +267,7 @@
 				DC2220D31D968AFC006BFECC /* WXImgLoaderDefaultImpl.m in Sources */,
 				DC30C1511D145C8800267BEF /* ViewController.swift in Sources */,
 				DC30C14F1D145C8800267BEF /* AppDelegate.swift in Sources */,
-				DCE81ED61E2FD24400FA5B61 /* WXImageLoaderDefaultImplement.swift in Sources */,
+				DC59CAFF1E4B3F44004E3963 /* WXImageLoaderDefaultImplement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,6 @@
 source 'git@github.com/CocoaPods/Specs.git'
 
+use_frameworks!
 target 'SwiftWeexSample' do
  	pod 'WeexSDK', '0.9.5'
  	pod 'WXDevtool', '0.8.2'
