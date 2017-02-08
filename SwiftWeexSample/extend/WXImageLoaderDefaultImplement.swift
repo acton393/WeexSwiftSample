@@ -9,6 +9,7 @@
 import Foundation
 import WeexSDK
 import Swift
+import SDWebImage
 
 class WXImageLoaderDefaultImplement:NSObject, WXImgLoaderProtocol {
     public func downloadImageWithURL(url: String!, imageFrame: CGRect, userInfo options: [NSObject : AnyObject]!, completed completedBlock: ((UIImage!, NSError!, Bool) -> Void)!) -> WXImageOperationProtocol! {
