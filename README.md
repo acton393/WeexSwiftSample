@@ -4,6 +4,14 @@
 ##[WeexOCSample](https://github.com/acton393/WeexOCExample)
 
 
+
+
+now you just `pod install` or `pod update` and run the project.
+
+you can see how to custom your own handler、components or modules using swift
+
+-----------------
+
 #### You must replace file in WeexSwiftSample/lib/WeexSDK.framework and then WeexSwiftSample project can run correctly
 
 ### How to  get WeexSDK.framework
@@ -46,7 +54,6 @@ recommend you to <a href="#compile">compile</a> from Weex source [here](https://
 add `-ObjC` to your project settings,just like this
 
 ![img](http://img3.tbcdn.cn/L1/461/1/430ae522f5031ff728c95efea49219a11e6852b3)
-
 
 - reference	 
  [Swift and Objective-C in the Same Project](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html)
