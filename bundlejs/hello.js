@@ -64,12 +64,10 @@
 	  "type": "div",
 	  "children": [
 	    {
-	      "type": "text",
+	      "type": "map",
 	      "style": {
-	        "fontSize": 100
-	      },
-	      "attr": {
-	        "value": "Hello World."
+	        "width": 800,
+            "height": 1000
 	      }
 	    }
 	  ]
