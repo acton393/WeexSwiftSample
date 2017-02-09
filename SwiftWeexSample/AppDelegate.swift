@@ -32,6 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //init WeexSDK
         WXSDKEngine.initSDKEnvironment()
         
+        WXSDKEngine.registerComponent("map", with: WXMapComponent.self)
+        
         let viewController:ViewController = ViewController()
         viewController.url = URL.init(string: String.init(format: "file://%@/bundlejs/index.js", Bundle.main.bundlePath))
         window = UIWindow.init(frame: UIScreen.main.bounds)
