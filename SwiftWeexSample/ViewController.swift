@@ -30,28 +30,34 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
     }
     
     deinit {
+        /*
+         *http://stackoverflow.com/questions/31365097/can-i-print-function-type-in-swift
+         *
+         */
+        print(#function)
+        
         if instance != nil {
             instance!.destroy()
         }
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil;
     }
     
     func render(){
         if instance != nil {
             instance!.destroy()
         }
+        weak var weakSelf = self;
         instance = WXSDKInstance();
-        instance!.viewController = self
+        instance!.viewController = weakSelf
         let width = self.view.frame.size.width
         
         instance!.frame = CGRect(x: 0, y: 0, width: width, height: self.view.frame.size.height)
-        weak var weakSelf:ViewController? = self
         
-//        instance?.onCreate
         instance?.onCreate = {
             (view:UIView?)-> Void in
             weakSelf!.weexView.removeFromSuperview()
             weakSelf!.weexView = view!;
-            weakSelf!.view.addSubview(self.weexView)
+            weakSelf!.view.addSubview((weakSelf?.weexView)!)
             UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, weakSelf!.weexView)
         }
         
