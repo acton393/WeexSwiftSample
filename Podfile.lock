@@ -3,7 +3,7 @@ PODS:
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
   - SocketRocket (0.4.2)
-  - WeexSDK (0.10.0):
+  - WeexSDK (0.10.2):
     - SocketRocket
   - WXDevtool (0.8.2):
     - WeexSDK
@@ -11,15 +11,15 @@ PODS:
 DEPENDENCIES:
   - SDWebImage (= 3.7.5)
   - SocketRocket (= 0.4.2)
-  - WeexSDK (= 0.10.0)
+  - WeexSDK (= 0.10.2)
   - WXDevtool (= 0.8.2)
 
 SPEC CHECKSUMS:
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   SocketRocket: ffe08119b00ef982f6c37052a4705a057c8494ad
-  WeexSDK: ce11e52ec75602a9308b88f972530d3af732c0d5
+  WeexSDK: 299c8bd5bfc17c91de8e7efad91f5bebc44de3c7
   WXDevtool: 0a7a1062e0c8ba4e6aa96f910e3a129a0dcdde0c
 
-PODFILE CHECKSUM: cba3e0128e4e31579901ad4dd7134e3192ad2adc
+PODFILE CHECKSUM: 356d1746419c5bda61e3ca0d890d7acb346ac2a6
 
 COCOAPODS: 1.2.0.beta.1
