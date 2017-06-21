@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		721868E11F79B54A520A0FFE /* Pods_SwiftWeexSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6705EEB222486ACEBE4FD5 /* Pods_SwiftWeexSample.framework */; };
+		49CEDB83713FC2649B15FAC8 /* Pods_SwiftWeexSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BBDA7EC56C5F74972A4471F /* Pods_SwiftWeexSample.framework */; };
+		DC02242B1EFA97BF0078578F /* WeexSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0224281EFA97050078578F /* WeexSDK.framework */; };
+		DC02242C1EFA97BF0078578F /* WeexSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DC0224281EFA97050078578F /* WeexSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DC2220C61D968018006BFECC /* WXEventModule.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2220C41D968018006BFECC /* WXEventModule.m */; };
 		DC2220CC1D9680C3006BFECC /* WXEventModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2220CB1D9680C3006BFECC /* WXEventModule.swift */; };
 		DC2220D31D968AFC006BFECC /* WXImgLoaderDefaultImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2220D21D968AFC006BFECC /* WXImgLoaderDefaultImpl.m */; };
@@ -21,10 +23,25 @@
 		DCEC6C6B1D96761800C7FA7F /* bundlejs in Resources */ = {isa = PBXBuildFile; fileRef = DCEC6C6A1D96761800C7FA7F /* bundlejs */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		DC02242D1EFA97BF0078578F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DC02242C1EFA97BF0078578F /* WeexSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5D010E1603E5FF8168CAE50D /* Pods-SwiftWeexSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftWeexSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftWeexSample/Pods-SwiftWeexSample.debug.xcconfig"; sourceTree = "<group>"; };
 		68195F33A72AD74FFAB17EB6 /* Pods-SwiftWeexSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftWeexSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftWeexSample/Pods-SwiftWeexSample.release.xcconfig"; sourceTree = "<group>"; };
-		CB6705EEB222486ACEBE4FD5 /* Pods_SwiftWeexSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftWeexSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BBDA7EC56C5F74972A4471F /* Pods_SwiftWeexSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftWeexSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC0224281EFA97050078578F /* WeexSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WeexSDK.framework; path = Carthage/Build/iOS/WeexSDK.framework; sourceTree = "<group>"; };
 		DC2220C41D968018006BFECC /* WXEventModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WXEventModule.m; path = extend/WXEventModule.m; sourceTree = "<group>"; };
 		DC2220C51D968018006BFECC /* WXEventModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXEventModule.h; path = extend/WXEventModule.h; sourceTree = "<group>"; };
 		DC2220C71D968065006BFECC /* SwiftWeexSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftWeexSample-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -58,7 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				721868E11F79B54A520A0FFE /* Pods_SwiftWeexSample.framework in Frameworks */,
+				DC02242B1EFA97BF0078578F /* WeexSDK.framework in Frameworks */,
+				49CEDB83713FC2649B15FAC8 /* Pods_SwiftWeexSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +143,7 @@
 		DC86B1691D145D45001E3655 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC0224281EFA97050078578F /* WeexSDK.framework */,
 				DC7A15C81E0BC827001BDAA4 /* libstdc++.6.0.9.tbd */,
 				DC9867411D825E5E000AF388 /* GLKit.framework */,
 				DC86B17D1D146261001E3655 /* MediaPlayer.framework */,
@@ -135,7 +154,7 @@
 				DC86B1731D146174001E3655 /* libicucore.tbd */,
 				DC86B16E1D146117001E3655 /* JavaScriptCore.framework */,
 				DC86B1671D145D3E001E3655 /* WeexSDK.framework */,
-				CB6705EEB222486ACEBE4FD5 /* Pods_SwiftWeexSample.framework */,
+				7BBDA7EC56C5F74972A4471F /* Pods_SwiftWeexSample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -153,6 +172,7 @@
 				DC30C1491D145C8800267BEF /* Resources */,
 				4FB16319838EAD23A027E1F7 /* [CP] Embed Pods Frameworks */,
 				2BB5550D25EB41BB10635E85 /* [CP] Copy Pods Resources */,
+				DC02242D1EFA97BF0078578F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -394,7 +414,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SwiftWeexSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -414,7 +437,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SwiftWeexSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8A638AE2277F0DF60AC81B32400516ECB3736AC9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "8A638AE2277F0DF60AC81B32400516ECB3736AC9" : 9223372036854775807,
+    "B69E8DDD398BF0860B647E2B48C82291C09E6EC5" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A84A38A6-9905-46F8-9735-DB3593E7B548",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "8A638AE2277F0DF60AC81B32400516ECB3736AC9" : "WeexSwiftSample\/",
+    "B69E8DDD398BF0860B647E2B48C82291C09E6EC5" : "weex-ios\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SwiftWeexSample",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SwiftWeexSample.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:acton393\/WeexSwiftSample.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8A638AE2277F0DF60AC81B32400516ECB3736AC9"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:acton393\/weex.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B69E8DDD398BF0860B647E2B48C82291C09E6EC5"
+    }
+  ]
+}
