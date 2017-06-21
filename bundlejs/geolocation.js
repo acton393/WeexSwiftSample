@@ -45,11 +45,10 @@
 /***/ 0:
 /***/ (function(module, exports, __webpack_require__) {
 
-	var __weex_template__ = __webpack_require__(359)
-	var __weex_style__ = __webpack_require__(360)
-	var __weex_script__ = __webpack_require__(361)
+	var __weex_template__ = __webpack_require__(201)
+	var __weex_script__ = __webpack_require__(202)
 
-	__weex_define__('@weex-component/491ca7f339a97e2fe3e130536e8fb536', [], function(__weex_require__, __weex_exports__, __weex_module__) {
+	__weex_define__('@weex-component/c1022e7ee9ce09ed1eadcf7bffe1b341', [], function(__weex_require__, __weex_exports__, __weex_module__) {
 
 	    __weex_script__(__weex_module__, __weex_exports__, __weex_require__)
 	    if (__weex_exports__.__esModule && __weex_exports__.default) {
@@ -58,11 +57,9 @@
 
 	    __weex_module__.exports.template = __weex_template__
 
-	    __weex_module__.exports.style = __weex_style__
-
 	})
 
-	__weex_bootstrap__('@weex-component/491ca7f339a97e2fe3e130536e8fb536',undefined,undefined)
+	__weex_bootstrap__('@weex-component/c1022e7ee9ce09ed1eadcf7bffe1b341',undefined,undefined)
 
 /***/ }),
 
@@ -92,45 +89,49 @@
 
 /***/ }),
 
-/***/ 359:
+/***/ 201:
 /***/ (function(module, exports) {
 
 	module.exports = {
-	  "type": "div",
+	  "type": "scroller",
 	  "children": [
 	    {
-	      "type": "text",
-	      "classList": [
-	        "title"
-	      ],
-	      "repeat": {
-	        "expression": function () {return this.list},
-	        "value": "value"
+	      "type": "div",
+	      "style": {
+	        "alignItems": "center"
 	      },
-	      "attr": {
-	        "value": function () {return this.value}
-	      }
+	      "children": [
+	        {
+	          "type": "text",
+	          "style": {
+	            "fontSize": 30,
+	            "color": "#000000"
+	          },
+	          "attr": {
+	            "value": function () {return this.location}
+	          }
+	        },
+	        {
+	          "type": "text",
+	          "style": {
+	            "fontSize": 35,
+	            "color": "#FFA07A"
+	          },
+	          "attr": {
+	            "value": function () {return this.watchlocation}
+	          }
+	        }
+	      ]
 	    }
 	  ]
 	}
 
 /***/ }),
 
-/***/ 360:
-/***/ (function(module, exports) {
-
-	module.exports = {
-	  "title": {
-	    "fontSize": 48
-	  }
-	}
-
-/***/ }),
-
-/***/ 361:
+/***/ 202:
 /***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = function(module, exports, __weex_require__){'use strict';
+	module.exports = function(module, exports, __weex_require__){"use strict";
 
 	var _stringify = __webpack_require__(102);
 
@@ -139,34 +140,40 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = {
-	  data: function () {return {
-	    list: []
-	  }},
-	  events: {
-	    custom: function custom(e) {
-	      this.list.push('custom: ' + (0, _stringify2.default)(e.detail));
-	    }
-	  },
-	  ready: function ready() {
-	    function custom2(e) {
-	      this.list.push('custom2: ' + (0, _stringify2.default)(e.detail));
-	    }
+	    data: function () {return {
+	        location: "等待定位数据",
+	        watchlocation: "watch location",
+	        i: 0
+	    }},
+	    created: function created() {
+	        var geolocation = __weex_require__('@weex-module/geolocation');
+	        geolocation.getCurrentPosition(function (result) {
+	            console.log("into--[getCurrentPosition success] result:" + (0, _stringify2.default)(result));
+	            this.location = (0, _stringify2.default)(result);
+	        }.bind(this), function (result) {
+	            console.log("into--[getCurrentPosition error] result:" + (0, _stringify2.default)(result));
+	            this.location = (0, _stringify2.default)(result);
+	        }.bind(this), { enableHighAcuracy: false, address: true });
 
-	    this.$on('custom2', custom2);
+	        geolocation.watchPosition(function (result) {
+	            console.log("into--[watchPosition success] result:" + (0, _stringify2.default)(result));
+	            var str = this.watchlocation + '\n' + (0, _stringify2.default)(result);
+	            this.watchlocation = str;
+	            this.i += 1;
 
-	    this.$emit('custom', { x: 1 });
-	    this.$emit('custom2', { x: 1 });
-
-	    this.$off('custom2', custom2);
-
-	    this.$emit('custom', { x: 2 });
-	    this.$emit('custom2', { x: 2 });
-
-	    this.$off('custom');
-
-	    this.$emit('custom', { x: 3 });
-	    this.$emit('custom2', { x: 3 });
-	  }
+	            if (this.i == 2) {
+	                geolocation.clearWatch(result.registerId);
+	                __weex_require__('@weex-module/modal').toast({
+	                    'message': "[clear watch] id:" + result.registerId,
+	                    'duration': 1
+	                });
+	            }
+	        }.bind(this), function (result) {
+	            console.log("into--[watchPosition success] result:" + (0, _stringify2.default)(result));
+	            this.watchlocation = (0, _stringify2.default)(result);
+	        }.bind(this), { enableHighAcuracy: false, address: true });
+	    },
+	    methods: {}
 	};}
 	/* generated by weex-loader */
 

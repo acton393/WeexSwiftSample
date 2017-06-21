@@ -43,11 +43,11 @@
 /******/ ({
 
 /***/ 0:
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-	var __weex_template__ = __webpack_require__(192)
-	var __weex_style__ = __webpack_require__(193)
-	var __weex_script__ = __webpack_require__(194)
+	var __weex_template__ = __webpack_require__(206)
+	var __weex_style__ = __webpack_require__(207)
+	var __weex_script__ = __webpack_require__(208)
 
 	__weex_define__('@weex-component/c90fb40e28668dc487c3cb9e5dc4fabd', [], function(__weex_require__, __weex_exports__, __weex_module__) {
 
@@ -64,28 +64,44 @@
 
 	__weex_bootstrap__('@weex-component/c90fb40e28668dc487c3cb9e5dc4fabd',undefined,undefined)
 
-/***/ },
+/***/ }),
 
-/***/ 192:
-/***/ function(module, exports) {
+/***/ 206:
+/***/ (function(module, exports) {
 
 	module.exports = {
-	  "type": "div",
+	  "type": "scroller",
+	  "style": {
+	    "alignItems": "center"
+	  },
 	  "children": [
 	    {
-	      "type": "text",
-	      "classList": [
-	        "title1"
-	      ],
-	      "attr": {
-	        "value": "Assets: "
-	      }
+	      "type": "div",
+	      "style": {
+	        "marginTop": 20
+	      },
+	      "children": [
+	        {
+	          "type": "text",
+	          "style": {
+	            "color": "#FF0000",
+	            "fontSize": 50
+	          },
+	          "attr": {
+	            "value": "only support font for ttf and woff"
+	          }
+	        }
+	      ]
 	    },
 	    {
 	      "type": "text",
 	      "classList": [
 	        "title2"
 	      ],
+	      "style": {
+	        "marginTop": 50,
+	        "width": 500
+	      },
 	      "attr": {
 	        "value": "http ttf: "
 	      }
@@ -95,26 +111,185 @@
 	      "classList": [
 	        "title3"
 	      ],
+	      "style": {
+	        "marginTop": 50,
+	        "width": 500
+	      },
 	      "attr": {
 	        "value": "http woff: "
 	      }
 	    },
 	    {
-	      "type": "text",
-	      "classList": [
-	        "title4"
-	      ],
-	      "attr": {
-	        "value": "file: "
-	      }
+	      "type": "div",
+	      "style": {
+	        "flexDirection": "row",
+	        "marginTop": 50
+	      },
+	      "children": [
+	        {
+	          "type": "text",
+	          "style": {
+	            "fontFamily": "iconfont4",
+	            "fontSize": 50,
+	            "color": "#008000"
+	          },
+	          "attr": {
+	            "value": ""
+	          }
+	        },
+	        {
+	          "type": "text",
+	          "style": {
+	            "fontFamily": "iconfont4",
+	            "fontSize": 50
+	          },
+	          "attr": {
+	            "value": ""
+	          }
+	        },
+	        {
+	          "type": "text",
+	          "style": {
+	            "fontFamily": "iconfont4",
+	            "fontSize": 60,
+	            "color": "#0000FF"
+	          },
+	          "attr": {
+	            "value": ""
+	          }
+	        },
+	        {
+	          "type": "text",
+	          "style": {
+	            "fontFamily": "iconfont4",
+	            "fontSize": 60,
+	            "color": "#008000"
+	          },
+	          "attr": {
+	            "value": ""
+	          }
+	        }
+	      ]
+	    },
+	    {
+	      "type": "div",
+	      "style": {
+	        "flexDirection": "row",
+	        "marginTop": 50
+	      },
+	      "children": [
+	        {
+	          "type": "text",
+	          "style": {
+	            "fontFamily": "iconfont4",
+	            "fontSize": 50,
+	            "color": "#008000"
+	          },
+	          "attr": {
+	            "value": ""
+	          }
+	        },
+	        {
+	          "type": "text",
+	          "style": {
+	            "fontFamily": "iconfont4",
+	            "fontSize": 50
+	          },
+	          "attr": {
+	            "value": ""
+	          }
+	        },
+	        {
+	          "type": "text",
+	          "style": {
+	            "fontFamily": "iconfont4",
+	            "fontSize": 60,
+	            "color": "#0000FF"
+	          },
+	          "attr": {
+	            "value": ""
+	          }
+	        },
+	        {
+	          "type": "text",
+	          "style": {
+	            "fontFamily": "iconfont4",
+	            "fontSize": 60,
+	            "color": "#008000"
+	          },
+	          "attr": {
+	            "value": ""
+	          }
+	        }
+	      ]
+	    },
+	    {
+	      "type": "div",
+	      "children": [
+	        {
+	          "type": "text",
+	          "style": {
+	            "fontFamily": "iconfont4",
+	            "fontSize": 100,
+	            "marginTop": 50
+	          },
+	          "attr": {
+	            "value": ""
+	          }
+	        }
+	      ]
+	    },
+	    {
+	      "type": "div",
+	      "children": [
+	        {
+	          "type": "text",
+	          "style": {
+	            "fontFamily": "iconfont4",
+	            "fontSize": 100,
+	            "color": "#008000",
+	            "marginTop": 50
+	          },
+	          "attr": {
+	            "value": ""
+	          }
+	        },
+	        {
+	          "type": "text",
+	          "style": {
+	            "fontFamily": "iconfont4",
+	            "fontSize": 100,
+	            "marginTop": 50
+	          }
+	        }
+	      ]
+	    },
+	    {
+	      "type": "div",
+	      "style": {
+	        "flexDirection": "row"
+	      },
+	      "children": [
+	        {
+	          "type": "text",
+	          "style": {
+	            "fontFamily": "iconfont4",
+	            "fontSize": 70,
+	            "width": 750
+	          },
+	          "attr": {
+	            "value": ""
+	          }
+	        }
+	      ]
 	    }
 	  ]
 	}
 
-/***/ },
+/***/ }),
 
-/***/ 193:
-/***/ function(module, exports) {
+/***/ 207:
+/***/ (function(module, exports) {
 
 	module.exports = {
 	  "title1": {
@@ -123,12 +298,12 @@
 	    "fontFamily": "iconfont1"
 	  },
 	  "title2": {
-	    "color": "#FF0000",
+	    "color": "#808080",
 	    "fontSize": 36,
 	    "fontFamily": "iconfont2"
 	  },
 	  "title3": {
-	    "color": "#FF0000",
+	    "color": "#FFC0CB",
 	    "fontSize": 36,
 	    "fontFamily": "iconfont3"
 	  },
@@ -139,10 +314,10 @@
 	  }
 	}
 
-/***/ },
+/***/ }),
 
-/***/ 194:
-/***/ function(module, exports) {
+/***/ 208:
+/***/ (function(module, exports) {
 
 	module.exports = function(module, exports, __weex_require__){'use strict';
 
@@ -150,10 +325,7 @@
 	  created: function created() {
 	    var domModule = __weex_require__('@weex-module/dom');
 
-	    domModule.addRule('fontFace', {
-	      'fontFamily': "iconfont1",
-	      'src': "url('iconfont.ttf')"
-	    });
+
 	    domModule.addRule('fontFace', {
 	      'fontFamily': "iconfont2",
 	      'src': "url('http://at.alicdn.com/t/font_1469606063_76593.ttf')"
@@ -162,15 +334,16 @@
 	      'fontFamily': "iconfont3",
 	      'src': "url('http://at.alicdn.com/t/font_1469606522_9417143.woff')"
 	    });
+
 	    domModule.addRule('fontFace', {
 	      'fontFamily': "iconfont4",
-	      'src': "url('file:///storage/emulated/0/Android/data/com.alibaba.weex/cache/http:__at.alicdn.com_t_font_1469606063_76593.ttf')"
+	      'src': "url('http://at.alicdn.com/t/font_zn5b3jswpofuhaor.ttf')"
 	    });
 	  }
 	};}
 	/* generated by weex-loader */
 
 
-/***/ }
+/***/ })
 
 /******/ });

@@ -43,9 +43,9 @@
 /******/ ({
 
 /***/ 0:
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-	var __weex_template__ = __webpack_require__(191)
+	var __weex_template__ = __webpack_require__(203)
 
 	__weex_define__('@weex-component/3bfdbb5ef29172e6db527e1bc85ec8fd', [], function(__weex_require__, __weex_exports__, __weex_module__) {
 
@@ -55,24 +55,26 @@
 
 	__weex_bootstrap__('@weex-component/3bfdbb5ef29172e6db527e1bc85ec8fd',undefined,undefined)
 
-/***/ },
+/***/ }),
 
-/***/ 191:
-/***/ function(module, exports) {
+/***/ 203:
+/***/ (function(module, exports) {
 
 	module.exports = {
 	  "type": "div",
 	  "children": [
 	    {
-	      "type": "map",
+	      "type": "text",
 	      "style": {
-	        "width": 800,
-            "height": 1000
+	        "fontSize": 100
+	      },
+	      "attr": {
+	        "value": "Hello World."
 	      }
 	    }
 	  ]
 	}
 
-/***/ }
+/***/ })
 
 /******/ });
