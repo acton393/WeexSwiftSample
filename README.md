@@ -1,16 +1,26 @@
-#[Weex](https://github.com/alibaba/weex)
+#[Weex repository](https://github.com/apache/incubator-weex)
 
 
 ##[WeexOCSample](https://github.com/acton393/WeexOCExample)
 
 
+You can see how to custom your own handler、components or modules using swift in this repository.
 
+- [cocoaPods](https://cocoapods.org/)  
+	Add the following line to your Podfile:
+	
+	```
+   		pod 'WeexSDK'
+   	```
 
-now you just `pod install` or `pod update` and run the project.
+- [carthage](https://github.com/carthage/carthage)  
+  Add the following line to your Cartfile:
+  
+   	```
+   		github "apache/incubator-weex"
+   	```
 
-you can see how to custom your own handler、components or modules using swift
-
------------------
+-------------------------
 
 #### You must replace file in WeexSwiftSample/lib/WeexSDK.framework and then WeexSwiftSample project can run correctly
 
