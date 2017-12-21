@@ -7,4 +7,5 @@
 //
 
 #import "WXEventModule.h"
+#import "WXDivExtraComponent.h"
 //#import "WXImgLoaderDefaultImpl.h"

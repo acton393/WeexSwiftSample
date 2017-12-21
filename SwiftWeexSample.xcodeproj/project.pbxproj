@@ -18,6 +18,8 @@
 		DC30C1591D145C8800267BEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC30C1571D145C8800267BEF /* LaunchScreen.storyboard */; };
 		DC59CAFF1E4B3F44004E3963 /* WXImageLoaderDefaultImplement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC59CAFE1E4B3F44004E3963 /* WXImageLoaderDefaultImplement.swift */; };
 		DC59CB011E4B4642004E3963 /* WXMapComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC59CB001E4B4642004E3963 /* WXMapComponent.swift */; };
+		DCAF905B1FEBDB5A006167B2 /* WXDivExtraComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = DCAF905A1FEBDB5A006167B2 /* WXDivExtraComponent.m */; };
+		DCAF905D1FEBDBE9006167B2 /* WXDivExtraComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAF905C1FEBDBE9006167B2 /* WXDivExtraComponent.swift */; };
 		DCEC6C6B1D96761800C7FA7F /* bundlejs in Resources */ = {isa = PBXBuildFile; fileRef = DCEC6C6A1D96761800C7FA7F /* bundlejs */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +52,9 @@
 		DC86B17B1D14625C001E3655 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		DC86B17D1D146261001E3655 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		DC9867411D825E5E000AF388 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		DCAF90591FEBDB5A006167B2 /* WXDivExtraComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXDivExtraComponent.h; sourceTree = "<group>"; };
+		DCAF905A1FEBDB5A006167B2 /* WXDivExtraComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXDivExtraComponent.m; sourceTree = "<group>"; };
+		DCAF905C1FEBDBE9006167B2 /* WXDivExtraComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WXDivExtraComponent.swift; sourceTree = "<group>"; };
 		DCEC6C6A1D96761800C7FA7F /* bundlejs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bundlejs; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +89,9 @@
 				DC2220C41D968018006BFECC /* WXEventModule.m */,
 				DC2220C51D968018006BFECC /* WXEventModule.h */,
 				DC59CB001E4B4642004E3963 /* WXMapComponent.swift */,
+				DCAF90591FEBDB5A006167B2 /* WXDivExtraComponent.h */,
+				DCAF905A1FEBDB5A006167B2 /* WXDivExtraComponent.m */,
+				DCAF905C1FEBDBE9006167B2 /* WXDivExtraComponent.swift */,
 			);
 			name = extend;
 			sourceTree = "<group>";
@@ -234,13 +242,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftWeexSample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4FB16319838EAD23A027E1F7 /* [CP] Embed Pods Frameworks */ = {
@@ -249,9 +260,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftWeexSample/Pods-SwiftWeexSample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SocketRocket/SocketRocket.framework",
+				"${BUILT_PRODUCTS_DIR}/WeexSDK/WeexSDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketRocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WeexSDK.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -266,12 +284,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC2220C61D968018006BFECC /* WXEventModule.m in Sources */,
+				DCAF905B1FEBDB5A006167B2 /* WXDivExtraComponent.m in Sources */,
 				DC2220CC1D9680C3006BFECC /* WXEventModule.swift in Sources */,
 				DC2220D31D968AFC006BFECC /* WXImgLoaderDefaultImpl.m in Sources */,
 				DC30C1511D145C8800267BEF /* ViewController.swift in Sources */,
 				DC59CB011E4B4642004E3963 /* WXMapComponent.swift in Sources */,
 				DC30C14F1D145C8800267BEF /* AppDelegate.swift in Sources */,
 				DC59CAFF1E4B3F44004E3963 /* WXImageLoaderDefaultImplement.swift in Sources */,
+				DCAF905D1FEBDBE9006167B2 /* WXDivExtraComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,7 +423,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_DIR}/SwiftWeexSample/SwiftWeexSample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -422,7 +442,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.taobao.weex.SwiftWeexSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_DIR}/SwiftWeexSample/SwiftWeexSample-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

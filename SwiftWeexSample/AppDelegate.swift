@@ -26,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // register event module
         WXSDKEngine.registerModule("event", with: NSClassFromString("WXEventModule"))
         
+        // register extra component
+        WXSDKEngine.registerComponent("divExtra", with: NSClassFromString("WXDivExtraComponent"));
         // register handler
         WXSDKEngine.registerHandler(WXImageLoaderDefaultImplement(), with:NSProtocolFromString("WXImgLoaderProtocol"))
         
