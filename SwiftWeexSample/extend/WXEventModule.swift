@@ -9,7 +9,8 @@
 import Foundation
 
 public extension WXEventModule {
-    public func openURL(_ url:String) {
+    
+    @objc public func openURL(_ url:String) {
         var newUrl:String = url;
         if url.hasPrefix("//") {
             newUrl = String.init(format: "http://%@", url);
