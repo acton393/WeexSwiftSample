@@ -1,3 +1,5 @@
+// { "framework": "Vue" }
+
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -43,36 +45,95 @@
 /******/ ({
 
 /***/ 0:
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-	var __weex_template__ = __webpack_require__(191)
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = []
 
-	__weex_define__('@weex-component/3bfdbb5ef29172e6db527e1bc85ec8fd', [], function(__weex_require__, __weex_exports__, __weex_module__) {
+	/* script */
+	__vue_exports__ = __webpack_require__(491)
 
-	    __weex_module__.exports.template = __weex_template__
-
+	/* template */
+	var __vue_template__ = __webpack_require__(492)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/zifan/github/incubator-weex/examples/vue/hello.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	__vue_options__.style = __vue_options__.style || {}
+	__vue_styles__.forEach(function (module) {
+	  for (var name in module) {
+	    __vue_options__.style[name] = module[name]
+	  }
 	})
-
-	__weex_bootstrap__('@weex-component/3bfdbb5ef29172e6db527e1bc85ec8fd',undefined,undefined)
-
-/***/ },
-
-/***/ 191:
-/***/ function(module, exports) {
-
-	module.exports = {
-	  "type": "div",
-	  "children": [
-	    {
-	      "type": "map",
-	      "style": {
-	        "width": 800,
-            "height": 1000
-	      }
-	    }
-	  ]
+	if (typeof __register_static_styles__ === "function") {
+	  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
 	}
 
-/***/ }
+	module.exports = __vue_exports__
+	module.exports.el = 'true'
+	new Vue(module.exports)
+
+
+/***/ }),
+
+/***/ 491:
+/***/ (function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+
+	exports.default = {
+	  methods: {
+	    click: function click() {
+	      this.$refs.divExtra.componentMethodTest("test component Method");
+	    }
+	  }
+	};
+
+/***/ }),
+
+/***/ 492:
+/***/ (function(module, exports) {
+
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', [_c('text', {
+	    staticStyle: {
+	      fontSize: "100px"
+	    },
+	    on: {
+	      "click": _vm.clcik
+	    }
+	  }, [_vm._v("Hello World.")]), _c('divExtra', {
+	    ref: "divExtra",
+	    staticStyle: {
+	      backgroundColor: "red",
+	      width: "200px",
+	      height: "200px"
+	    }
+	  })], 1)
+	},staticRenderFns: []}
+	module.exports.render._withStripped = true
+
+/***/ })
 
 /******/ });
